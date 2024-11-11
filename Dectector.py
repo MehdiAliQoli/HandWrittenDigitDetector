@@ -19,7 +19,8 @@ models.compile(optimizer='sgd',
 loss = 'sparse_categorical_crossentropy',
 metrics = ['accuracy']
 )
-models.fit(x_train, y_train, epochs=8)
-test_accuracy = models.evaluate(x_test, y_test)
+
+history = models.fit(x_train,y_train,epochs=5)
+print(history.history['accuracy'])
 
 
